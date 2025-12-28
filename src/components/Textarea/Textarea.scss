@@ -1,0 +1,35 @@
+.textarea {
+  width: 100%;
+
+  &:has(.field__error) {
+    .textarea__input {
+      border-color: var(--c-red-40);
+    }
+  }
+
+  &:has(.textarea__input:focus) {
+    .textarea__input {
+      border-color: var(--c-blue-250);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 12px;
+    border: 1px solid var(--c-grey-100);
+    font-family: var(--f-field);
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 16px;
+    outline: none;
+    transition: border-color var(--t-base);
+  }
+
+  &__error {
+    color: var(--c-red-40);
+    padding: 0 16px;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}

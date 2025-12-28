@@ -1,0 +1,126 @@
+.field {
+  width: 100%;
+
+  &:has(.field__before-icon) {
+    .field__input {
+      padding-left: 50px;
+    }
+  }
+
+  &:has(.field__button) {
+    .field__input {
+      padding-right: 50px;
+    }
+  }
+
+  &:has(.field__error) {
+    .field__before-icon {
+      stroke: var(--c-red-40);
+    }
+
+    .field__input {
+      border-color: var(--c-red-40);
+    }
+  }
+
+  &:has(.field__input:focus) {
+    .field__before-icon {
+      stroke: var(--c-blue-250);
+    }
+
+    .field__input {
+      border-color: var(--c-blue-250);
+    }
+  }
+
+  &__label {
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__before-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--c-neutral-150);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: stroke var(--t-base);
+  }
+
+  &__input {
+    width: 100%;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid var(--c-grey-100);
+    font-family: var(--f-field);
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 16px;
+    outline: none;
+    transition: border-color var(--t-base);
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        & > svg {
+          stroke: var(--c-neutral-150);
+        }
+      }
+    }
+
+    & > svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: var(--c-grey-200);
+      pointer-events: none;
+      transition: stroke var(--t-base);
+
+      &:first-child {
+        opacity: 1;
+      }
+
+      &:last-child {
+        opacity: 0;
+      }
+    }
+
+    &.is-hide {
+      & > svg {
+        &:first-child {
+          opacity: 0;
+        }
+
+        &:last-child {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__error {
+    color: var(--c-red-40);
+    padding: 0 16px;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}

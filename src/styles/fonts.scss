@@ -1,0 +1,7 @@
+@use "./mixins";
+
+@include mixins.font-face("Montserrat", "Montserrat-Regular", 400);
+@include mixins.font-face("SFProDisplay", "SFProDisplay-Regular", 400);
+@include mixins.font-face("SFProDisplay", "SFProDisplay-Medium", 500);
+@include mixins.font-face("SFProDisplay", "SFProDisplay-SemiBold", 600);
+@include mixins.font-face("SFProDisplay", "SFProDisplay-Bold", 700);
