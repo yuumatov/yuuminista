@@ -4,6 +4,7 @@ import Textarea from "../components/Textarea"
 import Button from "../components/Button"
 import Select from "../components/Select"
 import Tag from "../components/Tag"
+import Topbar from "../components/Topbar"
 
 export default function () {
   const options = [
@@ -212,6 +213,11 @@ export default function () {
           Заявка на выполнение работамечания, жалобы, предложения по работе
         </Tag>
       </div>
+
+      <br />
+      <br />
+
+      <Topbar link="ads.html" text="Добавление заявки АДС" />
     </>
   )
 }

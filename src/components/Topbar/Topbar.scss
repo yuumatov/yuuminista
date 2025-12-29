@@ -1,0 +1,26 @@
+.topbar {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  column-gap: 10px;
+
+  &__link-prev {
+    width: 24px;
+    height: 24px;
+
+    & > svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: var(--c-dark);
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--c-dark);
+  }
+}
