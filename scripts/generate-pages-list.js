@@ -63,7 +63,7 @@ export default function () {
           ${pages
             .map(
               (page) =>
-                `<li><a href="${page.name}" target="_blank">${page.title} (<b>${page.name}</b>)</a></li>`
+                `<li><a href="${page.name}.html" target="_blank">${page.title} (<b>${page.name}</b>)</a></li>`
             )
             .join("\n          ")}
         </ol>
