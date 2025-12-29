@@ -3,8 +3,8 @@ import { Icon } from "minista"
 
 export default ({ className, ...props }) => {
   return (
-    <div className="btn-plus" {...props}>
+    <a href="ads-add" className="btn-plus" {...props}>
       <Icon iconId="plus" />
-    </div>
+    </a>
   )
 }

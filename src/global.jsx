@@ -9,7 +9,9 @@ export default function ({ url, title, children }) {
         <title>{title}</title>
         <script src="/src/main.js" type="module" />
       </Head>
-      <div className="container">{children}</div>
+      <body>
+        <div className="container">{children}</div>
+      </body>
     </>
   )
 }
