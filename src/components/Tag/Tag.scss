@@ -1,0 +1,19 @@
+.tag {
+  background-color: var(--c-neutral-50);
+  color: var(--c-neutral-200);
+  padding: 0 13px;
+  height: 30px;
+  align-items: center;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: 240px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  &:active {
+    transform: scale(0.99);
+  }
+}

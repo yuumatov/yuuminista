@@ -3,6 +3,7 @@ import Field from "../components/Field"
 import Textarea from "../components/Textarea"
 import Button from "../components/Button"
 import Select from "../components/Select"
+import Tag from "../components/Tag"
 
 export default function () {
   const options = [
@@ -200,6 +201,17 @@ export default function () {
         options={options}
         error="Не выбрана категория"
       />
+
+      <br />
+      <br />
+
+      <div className="tag-wrapper">
+        <Tag>Авария</Tag>
+        <Tag>Замечания, жалобы, предложения по работе</Tag>
+        <Tag>
+          Заявка на выполнение работамечания, жалобы, предложения по работе
+        </Tag>
+      </div>
     </>
   )
 }
