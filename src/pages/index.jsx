@@ -7,6 +7,8 @@ import Tag from "../components/Tag"
 import Topbar from "../components/Topbar"
 import CardService from "../components/CardService"
 import CardRequest from "../components/CardRequest"
+import BtnPlus from "../components/BtnPlus"
+import Toggle from "../components/Toggle"
 
 export default function () {
   const options = [
@@ -123,6 +125,19 @@ export default function () {
           label: "Другое обращение",
         },
       ],
+    },
+  ]
+
+  const links = [
+    {
+      link: "#",
+      text: "Услуги",
+      isActive: true,
+    },
+    {
+      link: "#",
+      text: "Заявки АДС",
+      isActive: false,
     },
   ]
 
@@ -245,6 +260,16 @@ export default function () {
       <br />
 
       <CardRequest type="accent" />
+
+      <br />
+      <br />
+
+      <BtnPlus />
+
+      <br />
+      <br />
+
+      <Toggle links={links} />
     </>
   )
 }

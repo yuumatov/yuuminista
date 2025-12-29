@@ -1,0 +1,21 @@
+.btn-plus {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--c-blue-250);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  & > svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--c-white);
+  }
+}

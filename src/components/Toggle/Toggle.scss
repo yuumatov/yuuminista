@@ -1,0 +1,27 @@
+.toggle {
+  background-color: var(--c-grey-100);
+  padding: 2px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+
+  &__link {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--c-grey-250);
+    text-decoration: none;
+
+    &.is-active {
+      background-color: var(--c-white);
+      border-radius: 14px;
+      color: var(--c-black);
+      box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.08);
+    }
+  }
+}
