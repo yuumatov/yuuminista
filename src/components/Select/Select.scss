@@ -1,0 +1,119 @@
+.select {
+  width: 100%;
+  position: relative;
+
+  &:has(.select__error) {
+    .select__trigger {
+      border-color: var(--c-red-40);
+    }
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    height: 56px;
+    border: 1px solid var(--c-grey-100);
+    border-radius: 12px;
+    padding: 0 16px;
+    cursor: pointer;
+    background-color: var(--c-bg-field);
+    position: relative;
+    z-index: 1;
+    transition: border-color var(--t-base);
+  }
+
+  &__value {
+    font-size: 16px;
+    color: var(--c-grey-250);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--c-grey-250);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  &__dropdown {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    transform: translateY(calc(100% + 8px));
+    width: 100%;
+    max-height: 272px;
+    overflow: auto;
+    padding: 8px 16px;
+    background-color: var(--c-white);
+    border-radius: 12px;
+    box-shadow: 1px 2px 16px 0 rgba(0, 0, 0, 0.16);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+  }
+
+  &__group-label {
+    color: var(--c-grey-200);
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  &__option {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: color var(--t-base);
+    overflow: hidden;
+
+    &:hover {
+      color: var(--c-blue-250);
+    }
+
+    &.is-active {
+      color: var(--c-blue-250);
+      font-weight: 500;
+    }
+  }
+
+  &__error {
+    color: var(--c-red-40);
+    padding: 0 16px;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  &.is-selected {
+    .select__value {
+      color: var(--c-black);
+    }
+  }
+
+  &.is-open {
+    .select__trigger {
+      border-color: var(--c-blue-250);
+    }
+
+    .select__dropdown {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+}

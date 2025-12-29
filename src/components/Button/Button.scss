@@ -1,0 +1,29 @@
+.button {
+  --background: var(--c-blue-250);
+  --color: var(--c-white);
+
+  background-color: var(--background);
+  color: var(--color);
+  border-radius: 12px;
+  border: none;
+  padding: 0 30px;
+  min-width: 345px;
+  min-height: 56px;
+  cursor: pointer;
+  font-weight: 16;
+  font-weight: 500;
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &--secondary {
+    --background: var(--c-neutral-50);
+    --color: var(--c-neutral-200);
+  }
+
+  &:disabled {
+    --background: var(--c-grey-200);
+    pointer-events: none;
+  }
+}
