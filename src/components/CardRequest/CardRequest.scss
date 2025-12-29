@@ -1,0 +1,71 @@
+.card-reguest {
+  --background: var(--c-neutral-10);
+  --border: #d0dcea80;
+  --meta: var(--c-neutral-200);
+
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    padding: 12px 12px 16px 12px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border);
+    }
+
+    &--completed {
+      background-color: var(--c-green-20);
+    }
+  }
+
+  &__meta {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--meta);
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+
+    & > span {
+      display: inline-flex;
+      font-size: 11px;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      background-color: var(--c-green-50);
+      color: var(--c-white);
+      border-radius: 15px;
+    }
+  }
+
+  &__label {
+    font-size: 13px;
+    color: var(--c-grey-250);
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  &--completed {
+    --background: var(--c-green-10);
+    --border: #1ea2621a;
+    --meta: var(--c-green-50);
+  }
+
+  &--accent {
+    --background: var(--c-blue-50);
+    --border: #d0dcea80;
+    --meta: var(--c-blue-250);
+  }
+}

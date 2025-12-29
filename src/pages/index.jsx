@@ -5,6 +5,8 @@ import Button from "../components/Button"
 import Select from "../components/Select"
 import Tag from "../components/Tag"
 import Topbar from "../components/Topbar"
+import CardService from "../components/CardService"
+import CardRequest from "../components/CardRequest"
 
 export default function () {
   const options = [
@@ -217,7 +219,32 @@ export default function () {
       <br />
       <br />
 
-      <Topbar link="ads.html" text="Добавление заявки АДС" />
+      <Topbar link="javascript: void(0);" text="Добавление заявки АДС" />
+
+      <br />
+      <br />
+
+      <CardService title="Техническое обслуживание" />
+
+      <br />
+      <br />
+
+      <CardService title="Вода" />
+
+      <br />
+      <br />
+
+      <CardRequest />
+
+      <br />
+      <br />
+
+      <CardRequest type="completed" />
+
+      <br />
+      <br />
+
+      <CardRequest type="accent" />
     </>
   )
 }

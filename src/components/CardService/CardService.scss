@@ -1,0 +1,55 @@
+.card-service {
+  background-color: var(--c-neutral-10);
+  padding: 10px 8px 8px 8px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  &__item {
+    background-color: var(--c-white);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px;
+
+    &--paid {
+      .card-service__value,
+      .card-service__param {
+        color: var(--c-green-50);
+      }
+    }
+
+    &--debt {
+      grid-column: 3 span;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .card-service__value {
+        color: var(--c-red-40);
+      }
+    }
+  }
+
+  &__value {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__param {
+    font-size: 13px;
+    color: var(--c-grey-300);
+  }
+}
