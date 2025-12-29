@@ -12,7 +12,7 @@ export default function ({ url, title, children }) {
           href="src/assets/favicons/favicon.ico"
           type="image/x-icon"
         ></link>
-        <script src="/src/main.js" type="module" />
+        <script src="/src/main.js" />
       </Head>
       <body>
         <div className="container">{children}</div>

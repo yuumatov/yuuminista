@@ -7,17 +7,17 @@ export default function () {
         <title>Pages list</title>
       </Head>
 
-      <div className="pages-list">
-        <h1>Pages</h1>
-        <ul>
-          <li><a href="ads-add-error">Добавление заявки АДС с ошибкой</a></li>
-          <li><a href="ads-add">Добавление заявки АДС</a></li>
-          <li><a href="ads">Заявки АДС</a></li>
-          <li><a href="auth-error">Авторизация c ошибкой</a></li>
-          <li><a href="auth">Авторизация</a></li>
-          <li><a href="services">Услуги</a></li>
-        </ul>
-      </div>
+      <main>
+        <h1>Список страниц</h1>
+        <ol>
+          <li><a href="ads-add-error" target="_blank">Добавление заявки АДС с ошибкой (<b>ads-add-error</b>)</a></li>
+          <li><a href="ads-add" target="_blank">Добавление заявки АДС (<b>ads-add</b>)</a></li>
+          <li><a href="ads" target="_blank">Заявки АДС (<b>ads</b>)</a></li>
+          <li><a href="auth-error" target="_blank">Авторизация c ошибкой (<b>auth-error</b>)</a></li>
+          <li><a href="auth" target="_blank">Авторизация (<b>auth</b>)</a></li>
+          <li><a href="services" target="_blank">Услуги (<b>services</b>)</a></li>
+        </ol>
+      </main>
     </>
   )
 }

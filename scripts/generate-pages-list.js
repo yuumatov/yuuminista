@@ -57,17 +57,17 @@ export default function () {
         <title>Pages list</title>
       </Head>
 
-      <div className="pages-list">
-        <h1>Pages</h1>
-        <ul>
+      <main>
+        <h1>Список страниц</h1>
+        <ol>
           ${pages
             .map(
               (page) =>
-                `<li><a href="${page.name}">${page.title}</a></li>`
+                `<li><a href="${page.name}" target="_blank">${page.title} (<b>${page.name}</b>)</a></li>`
             )
             .join("\n          ")}
-        </ul>
-      </div>
+        </ol>
+      </main>
     </>
   )
 }
