@@ -1,7 +1,36 @@
 body {
-  margin: 50px;
   font-family: var(--f-base), sans-serif;
   color: var(--c-black);
+}
+
+.container {
+  width: 100%;
+  max-width: 540px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 32px;
+  padding-top: 16px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  &__submit {
+    margin-top: 6px;
+  }
 }
 
 .tag-wrapper {

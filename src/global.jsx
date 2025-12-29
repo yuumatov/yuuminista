@@ -1,6 +1,4 @@
 import { Head } from "minista"
-import Header from "./layouts/Header"
-import Footer from "./layouts/Footer"
 
 import "./styles"
 
@@ -11,9 +9,7 @@ export default function ({ url, title, children }) {
         <title>{title}</title>
         <script src="/src/main.js" type="module" />
       </Head>
-      {/* <Header url={url} /> */}
-      {children}
-      {/* <Footer /> */}
+      <div className="container">{children}</div>
     </>
   )
 }
